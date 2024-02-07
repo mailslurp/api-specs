@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "d76813ab-675a-4a35-b5fa-8bea5aa6851a",
+		"name": "Examples",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "20377432-d76813ab-675a-4a35-b5fa-8bea5aa6851a"
+	},
+	"item": [
+		{
+			"name": "Create an inbox",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "995442dc-c0db-4dc9-9e9c-60c8831a3bd3",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "4569b09e-9f89-4ed8-903b-54bf7977b71f",
+						"exec": [
+							"pm.test(\"Has email address\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.emailAddress).to.match(/@mailslurp/);\r",
+							"\r",
+							"    pm.globals.set(\"inbox_id\", jsonData.id);\r",
+							"    pm.globals.set(\"email_address\", jsonData.emailAddress);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "1b5d0e67-d001-4bc9-9db8-05423383b380",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/inboxes/withDefaults",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"inboxes",
+						"withDefaults"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{apiKey}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "x-api-key",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ec0d8488-deb6-4eeb-b5e1-c69e79d8748a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "7053de62-0a39-4785-b5ed-287ff5a9001e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "b9fe3992-f8e1-4bcc-9e7a-e05514fd859a",
+			"key": "apiKey",
+			"value": "YOUR_API_KEY",
+			"type": "string"
+		}
+	]
+}

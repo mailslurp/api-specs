@@ -9,6 +9,7 @@ id = 33f4e144-0c05-4ab4-9088-80e9e332c215
 
 [config.relations.collections]
 rootDirectory = remote
+files[] = {"id":"20377432-d76813ab-675a-4a35-b5fa-8bea5aa6851a","path":"Examples.json","metaData":{}}
 
 [config.relations.collections.metaData]
 
