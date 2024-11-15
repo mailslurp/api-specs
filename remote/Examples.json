@@ -28,7 +28,7 @@
 							"    var jsonData = pm.response.json();\r",
 							"    pm.expect(jsonData.emailAddress).to.match(/@mailslurp/);\r",
 							"\r",
-							"    pm.globals.set(\"inbox_id\", jsonData.id);\r",
+							"    /* set vars */ pm.globals.set(\"inbox_id\", jsonData.id);\r",
 							"    pm.globals.set(\"email_address\", jsonData.emailAddress);\r",
 							"});"
 						],
