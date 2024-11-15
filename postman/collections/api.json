@@ -6,11 +6,11 @@
             "item": [
                 {
                     "id": "0f49ac3b-d22c-4607-b8a0-83e3e6d3e64d",
-                    "name": "Attach a WebHook URL to an inbox",
+                    "name": "Attach a Web Hook URL to an inbox",
                     "request": {
-                        "name": "Attach a WebHook URL to an inbox",
+                        "name": "Attach a Web Hook URL to an inbox",
                         "description": {
-                            "content": "Get notified of account level events such as bounce and bounce recipient.",
+                            "content": "Be notified of account level events such as bounce and bounce recipient.",
                             "type": "text/plain"
                         },
                         "url": {
