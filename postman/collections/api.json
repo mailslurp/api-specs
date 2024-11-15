@@ -6,7 +6,7 @@
             "item": [
                 {
                     "id": "0f49ac3b-d22c-4607-b8a0-83e3e6d3e64d",
-                    "name": "Attach a WebHook URL to an inbox",
+                    "name": "Attach a Web hook URL to an inbox",
                     "request": {
                         "name": "Attach a WebHook URL to an inbox",
                         "description": {
